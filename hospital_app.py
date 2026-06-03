@@ -86,4 +86,55 @@ DEPT_INFO = {
 
 
   #Hero Header
-  
+  st.markdown("""
+<div style="background:linear-gradient(135deg,#1e3a8a 0%,#1a56db 60%,#0ea5e9 100%);
+            padding:3rem 2rem 2.5rem;margin:-1rem -1rem 2rem;text-align:center;">
+    <div style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);
+                text-transform:uppercase;letter-spacing:0.1em;margin-bottom:12px;">
+        🏥 Future Classroom · Machine Learning
+    </div>
+    <div style="font-size:36px;font-weight:700;color:#ffffff;margin-bottom:12px;
+                letter-spacing:-0.02em;">
+        Smart Hospital Patient Navigator
+    </div>
+    <div style="font-size:18px;color:rgba(255,255,255,0.85);font-weight:400;">
+        Find the Right Department for Your Symptoms
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+# ── Form ──────────────────────────────────────────────────────────────────────
+with st.form("triage_form"):
+
+    # Section 1 — Symptoms
+    st.markdown("""
+    <div style="background:#f0f9ff;border:1px solid #bae6fd;border-radius:14px;
+                padding:20px 24px;margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:4px;">
+            <span style="background:#0284c7;color:white;border-radius:8px;
+                         padding:4px 10px;font-size:12px;font-weight:600;">1</span>
+            <span style="font-size:16px;font-weight:600;color:#0c4a6e;">What are your main symptoms?</span>
+            <span style="font-size:13px;color:#6b7280;font-style:italic;">select all that apply</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    c1, c2, c3, c4 = st.columns(4)
+    with c1:
+        fever            = st.checkbox("🌡️  Fever")
+        cough            = st.checkbox("🤧  Cough")
+    with c2:
+        headache         = st.checkbox("🤕  Headache")
+        chest_pain       = st.checkbox("💔  Chest Pain")
+    with c3:
+        stomach_pain     = st.checkbox("🤢  Stomach Pain")
+        shortness_breath = st.checkbox("😮‍💨  Shortness of Breath")
+    with c4:
+        nausea_vomiting  = st.checkbox("🤮  Nausea / Vomiting")
+        dizziness        = st.checkbox("😵  Dizziness")
+
+    c5, _, _, _ = st.columns(4)
+    with c5:
+        skin_rash = st.checkbox("🔴  Skin Rash")
+
+    st.markdown("<br>", unsafe_allow_html=True)
