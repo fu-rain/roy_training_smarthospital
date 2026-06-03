@@ -85,8 +85,8 @@ DEPT_INFO = {
 }
 
 
-  #Hero Header
-  st.markdown("""
+#Hero Header
+st.markdown("""
 <div style="background:linear-gradient(135deg,#1e3a8a 0%,#1a56db 60%,#0ea5e9 100%);
             padding:3rem 2rem 2.5rem;margin:-1rem -1rem 2rem;text-align:center;">
     <div style="font-size:14px;font-weight:500;color:rgba(255,255,255,0.7);
