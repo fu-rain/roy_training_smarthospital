@@ -12,5 +12,6 @@ st.markdown("""
 
     html, body, [class*="css"] {font-family: 'Inter', sans-serif}
     #MainMenu {visibility: hidden;}
+    header[data-testid="stHeader"] {display:none}
   </style>
 """)
